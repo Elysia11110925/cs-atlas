@@ -1,5 +1,5 @@
-const CACHE='cs-atlas-da3d73c910c0';
-const ASSETS=["./","./algorithms.js","./app.js","./content.js","./curriculum.js","./database.js","./expanded-algo-network.js","./expanded-foundations.js","./expanded-network-final.js","./expanded-special-topics.js","./expanded-sql-compiler.js","./expanded-stl-ds.js","./expanded-strings.js","./index.html","./offline-client.js","./offline.html","./style.css","./systems.js"];
+const CACHE='cs-atlas-9d987aa9ad09';
+const ASSETS=["./","./algorithms.js","./app.js","./beginner-base.js","./beginner-ui.js","./beginner.css","./content.js","./curriculum.js","./database.js","./expanded-algo-network.js","./expanded-foundations.js","./expanded-network-final.js","./expanded-special-topics.js","./expanded-sql-compiler.js","./expanded-stl-ds.js","./expanded-strings.js","./guides-ds-algo.js","./guides-net-advanced-stl.js","./guides-sql-compiler.js","./guides-stl-core.js","./index.html","./offline-client.js","./offline.html","./style.css","./systems.js","./walkthrough-traces.js","./worked-examples.js"];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('cs-atlas-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
